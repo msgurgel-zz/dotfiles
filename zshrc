@@ -36,11 +36,5 @@ alias goback='bin/rails db:rollback STEP=1'
 
 [ -f /opt/dev/dev.sh ] && source /opt/dev/dev.sh
 
-# tmux by default
-if [ -z "$TMUX" ] && [ -n "$SSH_TTY" ] && [[ $- =~ i ]]; then
-  tmux -CC attach-session || tmux -CC new-session
-  exit
-fi
-
 # Enable autosuggestions plugin 
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
