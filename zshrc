@@ -36,10 +36,6 @@ alias goback='bin/rails db:rollback STEP=1'
 
 [ -f /opt/dev/dev.sh ] && source /opt/dev/dev.sh
 
-# thefuck setup
-eval $(thefuck --alias)
-if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/magu/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
-
 # tmux by default
 if [ -z "$TMUX" ] && [ -n "$SSH_TTY" ] && [[ $- =~ i ]]; then
   tmux -CC attach-session || tmux -CC new-session
